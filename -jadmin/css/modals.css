@@ -1,0 +1,165 @@
+.modalGradiant{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(28, 27, 27, 0.733);
+    backdrop-filter: blur(5px);
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .7s;
+    --transform: translateY(20vh);
+    --transition: transform .9s;
+}       
+
+.modalGradiant.modal-show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .7s;
+    --transform: translateY(0);
+}
+
+.modal{
+    background-color: var(--colorBlancoFondo);
+    width: 700px;   
+    overflow: hidden;
+    border-radius: 4px;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modal__header{
+    width: 100%;
+    background-color: var(--rosa_claro);
+    color: var(--colorBlancoFondo);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.modal__header span{
+    float: left;
+}
+
+.modal__header button{  
+    background-color: transparent;
+    border: none;
+    color: #ffffffe7;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.modal__content{
+    width: 100%;
+    padding: 10px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__content-containerInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+.modal__content-containerInfo span{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 5px;
+    min-width: 210px;
+}
+.modal__content-containerInfo span img{
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.containerInputsCantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorBlancoFondo);
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    gap: 20px;
+}
+
+.containerButtonsCantidad{
+    width: 100%;
+    text-align: center;
+}
+
+.containerButtonsCantidad button{
+    padding: 1em;
+    border: 1px solid var(--rosa_claro);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px 3px;
+    font-weight: 900;
+    transition: background-color .2s;
+}
+
+.containerButtonsCantidad button:hover{
+    background-color: #d703713d;
+}
+
+.containerInput{
+    width: 85%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerInput input{
+    text-align: center;
+}
+
+.modal__footer{
+    float: right;
+    padding: 20px;
+}
+
+.modal__footer button{
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--rosa_claro);
+    border-radius: 4px;
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+.btnCancelar{
+    color: var(--rosa_claro);
+}
+
+.btnCancelar:hover{
+    background-color: #d703713d;
+    color: #000;
+}
+
+.btnGuardar{
+    color: var(--colorBlancoFondo);
+    background-color: #b90069ce;
+}
+
+.btnGuardar:hover{
+    background-color: #a1025c;
+}

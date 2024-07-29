@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;1,100&family=Lobster&family=Noto+Sans&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-image: url('../../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+
+}
+
+.containerMain{
+    width: 100%;
+    min-width: 500px;
+    height: 100vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.containerMain__divContainerCarrito{
+    width: 45%;
+    min-width: 500px;
+    height: 92%;
+    border-radius: 9px;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.809);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+}
+
+.containerMain__divContainerCarrito-containerBarCode{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px dashed #090086;
+    background-color: #0900866b;
+
+   /*  border-bottom: 1px dashed #000;
+    background: rgba(0, 0, 0, 0.062);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(54%, rgba(1,2,31,1)), color-stop(100%, rgba(3,5,41,1)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 44, 0.973) 55%, rgb(32, 1, 14) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#030529', GradientType=1 ); */
+}
+
+.containerMain___inputBarcode,
+.containerMain___inputSearch{
+    width: 50%;
+    position: relative;
+}
+
+
+.containerMain__divContainerCarrito-containerBarCode input{
+    padding: 5px;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    border:  1px solid #000;
+    padding-left: 31px;
+}
+.containerMain__divContainerCarrito-containerBarCode input:focus{
+    box-shadow: 0px 0px 3px 2px rgb(137, 3, 135);
+    animation: focus .2s;
+}
+
+.containerMain___inputBarcode input{
+    width: 90%;
+}
+
+.containerMain___inputSearch input{
+    width: 100%;
+}
+
+.containerMain___inputBarcode i,
+.containerMain___inputSearch i{
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+.containerTablaCarrito{
+    padding: 0px 5px;
+    height: 73%;
+    overflow-y: auto;
+}
+
+/* ----------- Nueva iamgen al carrito lista ---------- */
+
+.carritoList{
+    display: table;
+    width: 100%;
+}
+.carritoList li{
+    padding: 2px;
+    margin: 9px auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0px 3px 7px #4b494960;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    transition: .2s;
+}
+
+
+.number{
+    padding: 5px;
+    font-family: 'Courier New', Courier;
+    font-size: .9em;
+}
+
+.imgProduct{
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 9px;
+}
+.imgProduct img{
+    width: 100px;
+    height: 100px;
+    border-radius: 9px;
+}
+
+.containerInfoProduct{
+    width: 100%;
+    padding: 10px;
+}
+
+
+.contentName-and-Delite{
+    width: 100%;
+    position: relative;
+    padding-right: 35px;
+}
+
+.producto{
+    font-weight: 600;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.delete{
+    float: right;
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    right: 0;
+}
+.delete i{
+    color: rgb(238, 36, 0);
+}
+.delete i:hover{
+    text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.326);
+}
+
+
+.precio{
+    display: block;
+    padding: 5px;
+}
+
+.contentSubtotal-and-Cantidad{
+    display: flex;
+    padding: 2px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-right: 35px;
+}
+
+
+.cantidad input{
+    width: 100px;
+    padding: 5px;
+    border-radius: 9px;
+    text-align: center;
+    border: 1px solid #000;
+    color: #000;
+    margin: 0px 5px;
+    outline: none;
+    font-size: 1em;
+}
+
+.cantidad .cantInput{
+    width: 120px;
+    padding: 5px;
+    border-radius: 9px;
+    text-align: center;
+    border: 1px solid #000;
+    color: #000;
+    margin: 0px 5px;
+    outline: none;
+    font-size: 1em;
+}
+
+.cantidad button{
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    font-weight: 900;
+    text-align: center;
+    background-color: #f513e644;
+    border: 1px solid #000;
+}
+
+.cantidad button:hover{
+    background-color: #f513e669
+}
+
+.subtotal{
+    float: right;
+    right: 5px;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+
+
+/* ---------------------------------------------------- */
+
+
+.containerfooter{
+    width: 100%;
+    height: 20%;
+    display: block;
+    align-items: center;
+    padding: 0px 10px;
+    background: rgba(0, 0, 0, 0.062);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(54%, rgba(1,2,31,1)), color-stop(100%, rgba(3,5,41,1)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(1,2,31,1) 54%, rgba(3,5,41,1) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 44, 0.973) 55%, rgb(32, 1, 14) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#030529', GradientType=1 );
+}
+
+
+.contentTipoCobro{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px dashed #090086;
+    border-bottom: 1px dashed #090086;
+    color: aliceblue;
+}
+
+.contentTipoCobro input{
+    display: none;
+}
+
+.contentTipoCobro label{
+    padding: 5px;
+    border: 1px solid #f0efef;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+
+
+
+#cobroEfectivo:checked + label,
+#cobroQR:checked + label,
+#cobroTarjeta:checked + label{
+    background-color: #847cfa82;
+    transition: background .3s;
+    color: rgb(210, 209, 209);
+    box-shadow: 0px 0px 2px #054bfa;
+    scale: 1.025;
+    font-weight: 600;
+}
+
+
+
+
+.comision p{
+    display: inline;
+    border-bottom: 1px solid #f3f3f3;
+    font-weight: 900;
+    font-size: 20px;
+    color: #fa9005;
+}
+
+
+
+
+
+.contentButtonsVenderAndCambio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    gap: 10px;
+}
+
+.contentButtonsVenderAndCambio button{
+    border-radius: 9px;
+    padding: 7px;
+    outline: none;
+    border: 1px solid;
+    font-size: 29px;
+    cursor: pointer;
+}
+
+.cambio{
+    border-color: #054bfa;
+    color: #054bfa;
+    background-color: #054afa30;
+}
+
+.cambio:hover{
+    box-shadow: 0px 0px 7px #054bfa;
+}
+
+.totalVenta{
+    width: 100%;
+    color: #110e0c;
+    background-color: #00ff48d2;
+    font-weight: 900;
+}
+
+.totalVenta:hover{
+    background-color: #00ff48f8;
+    box-shadow: 0px 0px 7px #00ff48d2;
+}
+
+
+
+
+
+
+
+
+@keyframes focus {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.025);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+.containerMain__divContainerCardsSearch{
+    width: 55%;
+    height: 92%;
+    border-radius: 9px;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.631);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.containerSelectProveedores{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-bottom: 1px dashed #090086;
+    background-color: #0900866b;
+}
+
+.selectProveedores{
+    width: 80%;
+    padding: 5px;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    border:  1px solid #000;
+    padding-left: 31px;
+}
+
+
+
+
+@media only screen and (max-width: 840px) {
+    body{
+        overflow: auto;
+    }
+    .containerMain{
+        flex-direction: column;
+        height: auto;
+    }
+    .containerMain__divContainerCarrito{
+        width: 100%;
+        height: 100vh;
+    }
+    .containerMain__divContainerCardsSearch{
+        width: 100%;
+    }
+
+    .containerTotales{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .containerBotones{
+        width: 20%;
+    }
+
+    .containerBotones button{
+        padding: 2px;
+        font-size: 13px;
+        width: 80%;
+    }
+
+    
+
+}

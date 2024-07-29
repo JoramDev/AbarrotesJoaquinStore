@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(243, 240, 255);
+}
+
+.containerAutocomplete{
+    width: 90%;
+    border-radius: 9px;
+    margin: 100px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.containerAutocomplete input{
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border-radius: 8px;
+    font-size: 18px;
+    
+}
+
+.list{
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    background-color: rgb(243, 240, 255);
+}
+.list li{
+    padding: none;
+}
+
+.list li button{
+    width: 100%;
+    display: block;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px 0px 5px 30px;
+}
+
+.list li button:hover{
+    background-color: rgba(2, 92, 177, 0.192);
+}
+
+.list li button.activeButton{
+    background-color: rgba(5, 74, 139, 0.378);
+}

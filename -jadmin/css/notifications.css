@@ -1,0 +1,134 @@
+.containerNotification{
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    z-index: 30;
+    pointer-events: none;
+    padding: 20px 50px;
+    opacity: 1;
+    transition: opacity .7s;
+
+/* 
+    --transition: transform 1s;
+    --transform: translateY(20vh); */
+}
+
+.containerNotification.notifi-show{
+    opacity: 1;
+    transition: opacity .7s;
+    --transform: translateY(0vh);
+}
+
+.containerNotification__container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+}
+
+.notificationSucces,
+.notificationError,
+.notificationWarning{
+    width: 500px;
+    padding: 10px;
+    border-radius: 7px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 10px 15px 9px #42424275;
+    gap: 5px;
+
+    transform: translateY(50vh);
+    transition: transform 1s;
+
+
+    /* transform: var(--transform);
+    transition: var(--transition); */
+}
+
+.notificationSucces{
+    border: 1px solid rgba(2, 161, 2, 0.61);
+    border-left: 20px solid rgba(2, 161, 2, 0.61);
+
+    background: linear-gradient(0deg, rgb(68, 156, 68) 0%, rgb(171, 248, 171) 34%, rgb(236, 253, 236) 100%);
+}
+
+.notificationSucces .notification__logo{
+    color: rgb(1, 138, 1);
+}
+.notificationSucces .notification__msg h3{
+    color: rgb(0, 14, 0);
+}
+
+
+
+
+.notificationError{
+    border: 1px solid rgba(161, 2, 2, 0.61);
+    border-left: 20px solid rgba(161, 2, 2, 0.61);
+
+    background: linear-gradient(0deg, rgb(156, 68, 68) 0%, rgb(248, 171, 171) 34%, rgb(253, 236, 236) 100%);
+}
+
+.notificationError .notification__logo{
+    color: rgb(138, 1, 1);
+}
+.notificationError .notification__msg h3{
+    color: rgb(14, 0, 0);
+}
+
+
+
+
+
+.notificationWarning{
+    border: 1px solid rgba(161, 113, 2, 0.61);
+    border-left: 20px solid rgba(161, 113, 2, 0.61);
+
+    background: linear-gradient(0deg, rgb(156, 130, 68) 0%, rgb(248, 222, 171) 34%, rgb(253, 246, 236) 100%);
+}
+
+.notificationWarning .notification__logo{
+    color: rgb(138, 99, 1);
+}
+.notificationWarning .notification__msg h3{
+    color: rgb(14, 9, 0);
+}
+
+
+
+
+
+.notification__logo{
+    font-size: 45px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.notification__msg{
+    padding: 10px;
+    font-size: 21px;
+}
+
+.notification__msg h3{
+    margin-bottom: 5px;
+}
+
+
+
+.succes,
+.error,
+.warning{
+    transform: translateY(0vh);
+}
+
+
+
+
+
+
